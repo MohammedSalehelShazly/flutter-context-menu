@@ -70,7 +70,16 @@ class CustomMenuTests extends StatelessWidget {
         onPressed: config.onPressed,
         child: SizedBox(width: double.infinity, child: Text(config.label)),
       ),
-      child: Container(color: Colors.blue.shade200, child: const TestContent(title: "Custom Menus")),
+      child: Container(
+        color: Colors.blue.shade200, 
+        // child: const TestContent(title: "Custom Menus"),
+        child: Row(
+          children: const [
+            Expanded(child: TestContent(title: "Custom Menus")),
+            Expanded(child: TestContent(title: "Custom Menus 2")),
+          ],
+        )
+      ),
     );
   }
 }
