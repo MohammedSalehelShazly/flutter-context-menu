@@ -65,11 +65,11 @@ class _ContextMenuButtonState extends State<ContextMenuButton> {
                 ],
 
                 /// Main Label
-                FittedBox(
+                Expanded(
                   child: Text(config.label,
                       style: style.textStyle!.copyWith(color: showMouseOver ? style.hoverFgColor : style.fgColor)),
                 ),
-                Spacer(),
+                // Spacer(),
 
                 /// Shortcut Label
                 if (config.shortcutLabel != null) ...[
